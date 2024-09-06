@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+
+    <!------------------------css link-------------------------->
+    <link rel="stylesheet" href="output.css" />
+
+    <!------------------------js link-------------------------->
+    <script src="./script.js"></script>
+
+    <!------------------------font link-------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-----------------fontawesome------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="bg-[url('/src/img/bg-4.jpg')] w-full h-screen bg-no-repeat">
+      <div class="container pt-5">
+        <div class="md:flex justify-between items-center space-y-3">
+          <section class="flex justify-center items-center gap-2">
+            <img src="./img/weather-forecast.png" class="w-12" />
+            <p class="first-letter:text-blue-600 font-bold text-2xl">
+              Weather <br />
+              Dashboard
+            </p>
+          </section>
+          <form
+            class="max-w-1/4 flex justify-between items-center rounded-full bg-[rgba(255,255,255,0.8)] p-2 border-1 border-gray-300"
+          >
+            <input
+              type="text"
+              placeholder="Search Location"
+              name="q"
+              class="outline-none bg-transparent"
+            />
+            <button type="submit" class="max-w-5">
+              <img src="./img/search.svg" />
+            </button>
+          </form>
+        </div>
+        <!---------------weather update---------------------->
+        <div class=" flex justify-center items-center">
+          <div
+            class="bg-[rgba(255,255,255,0.3)] p-8 rounded-md mt-10 md:flex md:justify-between items-center  "
+          >
+            <div
+              class="flex flex-col justify-between md:items-start items-center gap-5"
+            >
+              <img src="./img/cloudy.png" class="max-w-10" />
+              <p class="text-7xl font-bold">25&deg;</p>
+              <a href="#" class="text-2xl font-semibold"
+                ><i class="fa-solid fa-location-dot"> </i> Mymensingh</a
+              >
+              <time datetime="2024-08-17T23:22:54+06:00"
+                >August 17, 2024, 11:22 PM</time
+              >
+            </div>
+            <div class="mt-5">
+              <h1 class="text-center text-xl font-semibold">
+                THE CLIMATE IS MIST
+              </h1>
+              <div class="flex flex-col gap-2 mt-3">
+                <span class="text-center flex justify-between items-center">
+                  <p>Temp max</p>
+                  <p>
+                    25.93&deg;
+                    <i class="fa-solid fa-temperature-high text-red-600"></i>
+                  </p>
+                </span>
+                <span class="text-center flex justify-between items-center">
+                  <p>Temp min</p>
+                  <p>
+                    22.03&deg;
+                    <i class="fa-solid fa-temperature-low text-blue-400"></i>
+                  </p>
+                </span>
+                <span class="text-center flex justify-between items-center">
+                  <p>Humadity</p>
+                  <p>51% <i class="fa-solid fa-droplet"></i></p>
+                </span>
+                <span class="text-center flex justify-between items-center">
+                  <p>Cloudy</p>
+                  <p>2% <i class="fa-solid fa-cloud"></i></p>
+                </span>
+                <span class="text-center flex justify-between items-center">
+                  <p>Wind</p>
+                  <p>3.6km/h <i class="fa-solid fa-wind"></i></p>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
